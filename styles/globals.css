@@ -2,9 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Rubik, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -14,38 +13,4 @@ a {
 
 * {
   box-sizing: border-box;
-}
-b,
-strong,
-h3,
-h4,
-h5,
-h6 {
-  font-variation-settings: "wght" 650;
-}
-h1 {
-  font-variation-settings: "wght" 850;
-}
-h2 {
-  font-variation-settings: "wght" 750;
-}
-:root {
-  --primary: #18c3b7;
-  --warning: #ff9800;
-  --danger: #fa3624;
-  --secondary: #9fa9a8;
-  --dark: rgb(15, 15, 16);
-  --light: #f9f9f9;
-  --success: #4ae14f;
-  --info: #1ee5ff;
-}
-.dark-mode {
-  color: var(--light);
-  background: var(--dark);
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--dark);
-    color: var(--light);
-  }
 }
