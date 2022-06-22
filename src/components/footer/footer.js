@@ -15,7 +15,7 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <a href="/" rel="noopener noreferrer">
-        {year} © Powered by{" "}
+        {year} || by{" "}
         <span className={styles.logo}>
           <Image
             src={isDark ? "/logo-dark.png" : "/logo.png"}

@@ -1,33 +1,38 @@
-import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import Footer from "../src/components/footer/footer";
+import Typed from "typed.js";
+import { useEffect, useRef } from "react";
 
 export default function Home() {
+  const el = useRef(null);
+  const typed = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      strings: ["Web Designer", "Web Developer", "React Developer", ".dev"],
+      typeSpeed: 80,
+      backSpeed: 100,
+      showCursor: false,
+    };
+    typed.current = new Typed(el.current, options);
+  }, []);
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Adelkis.dev</title>
-        <meta
-          name="description"
-          content="My personal Portfolio and Blog of React Js"
-        />
-        <link rel="icon" href="/img/favicon.ico" />
-      </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Adelkis <a href="/">.dev</a>
+          Adelkis<span className={styles.typed} ref={el}></span>
         </h1>
 
         <p className={styles.description}>
           I'm Adelkis a developer with a lot of passion for developing sofware
-          on the web. So in this blog I will expose all my coriosities and
-          interests. The technology that I fell in love with and that caused my
-          curiosity is React, so I can Consider myself a react developer.
+          on the web.
+          <br />
+          So in this blog I will expose all my coriosities and interests.
+          <br />
+          The technology that I fell in love with and that caused my curiosity
+          is React, so I can Consider myself a react developer.
         </p>
       </main>
-
-      <Footer />
     </div>
   );
 }
