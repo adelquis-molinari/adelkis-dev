@@ -1,14 +1,15 @@
-import Footer from "../src/components/footer/footer";
-import Navbar from "../src/components/navbar/navbar";
+import Footer from '../src/components/footer/footer'
+import Navbar from '../src/components/navbar/navbar'
 
-function LayoutBase({ children }) {
+// eslint-disable-next-line react/prop-types
+function LayoutBase ({ children }) {
   return (
     <>
       <Navbar />
       {children}
       <Footer />
     </>
-  );
+  )
 }
 
-export default LayoutBase;
+export default LayoutBase

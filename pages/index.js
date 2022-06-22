@@ -1,20 +1,20 @@
-import styles from "../styles/Home.module.css";
-import Typed from "typed.js";
-import { useEffect, useRef } from "react";
+import styles from '../styles/Home.module.css'
+import Typed from 'typed.js'
+import { useEffect, useRef } from 'react'
 
-export default function Home() {
-  const el = useRef(null);
-  const typed = useRef(null);
+export default function Home () {
+  const el = useRef(null)
+  const typed = useRef(null)
 
   useEffect(() => {
     const options = {
-      strings: ["Web Designer", "Web Developer", "React Developer", ".dev"],
+      strings: ['Web Designer', 'Web Developer', 'React Developer', '.dev'],
       typeSpeed: 80,
       backSpeed: 100,
-      showCursor: false,
-    };
-    typed.current = new Typed(el.current, options);
-  }, []);
+      showCursor: false
+    }
+    typed.current = new Typed(el.current, options)
+  }, [])
 
   return (
     <div className={styles.container}>
@@ -34,5 +34,5 @@ export default function Home() {
         </p>
       </main>
     </div>
-  );
+  )
 }
