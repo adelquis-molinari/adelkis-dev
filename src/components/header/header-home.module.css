@@ -1,0 +1,102 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+.title span {
+  color: var(--secondary);
+  font-size: 3.75rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.title span:hover,
+.title span:focus,
+.title span:active {
+  color: var(--primary);
+}
+
+.contentTyped {
+  width: max-content;
+  height: 38px;
+}
+
+.typed {
+  color: var(--secondary);
+  font-size: 2rem;
+  width: 38px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.typed:hover,
+.typed:focus,
+.typed:active {
+  color: var(--primary);
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+  max-width: 80vh;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+.contentIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+  color: var(--dark);
+}
+.iconGit {
+  margin: 0 0.5em;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.iconGit:hover {
+  color: #ae20e6;
+  transform: scale(1.1);
+}
+.iconLinked {
+  margin: 0 0.5em;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.iconLinked:hover {
+  color: #24a1e9;
+  transform: scale(1.1);
+}
+.iconTwitter {
+  margin: 0 0.5em;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+.iconTwitter:hover {
+  color: #19ecff;
+  transform: scale(1.1);
+}
+@media (prefers-color-scheme: dark) {
+  .contentIcon {
+    color: var(--light);
+  }
+}
