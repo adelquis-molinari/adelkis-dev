@@ -48,4 +48,7 @@ h2 {
     background: var(--dark);
     color: var(--light);
   }
+  p {
+    color: var(--light);
+  }
 }

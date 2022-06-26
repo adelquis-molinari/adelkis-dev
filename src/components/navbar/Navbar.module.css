@@ -28,7 +28,7 @@
 }
 .Scrolled {
   padding: 1rem 4rem;
-  background: rgb(17, 17, 38);
+  background: var(--dark);
 }
 .Scrolled ul li a {
   color: var(--light);
