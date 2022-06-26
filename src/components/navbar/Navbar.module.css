@@ -1,21 +1,12 @@
-.navbarContenier {
+.navbar {
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 2rem 4rem;
   width: 100%;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: transparent;
-  border-radius: 0;
-  margin-bottom: 0;
-  padding: 1rem;
-  width: 80%;
+  z-index: 1;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar ul {
@@ -34,4 +25,20 @@
 }
 .navbar ul li a:hover {
   color: var(--primary);
+}
+.Scrolled {
+  padding: 1rem 4rem;
+  background: rgb(17, 17, 38);
+}
+.Scrolled ul li a {
+  color: var(--light);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 2rem 2rem;
+  }
+  .Scrolled {
+    padding: 1rem 2rem;
+  }
 }
