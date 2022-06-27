@@ -1,17 +1,20 @@
 import styles from "./Skills.module.css";
-import Image from "next/image";
+
+const skills = ["html-5", "css", "js", "react", "node-js", "express", "mdb"];
+
 function Skills() {
   return (
-    <section>
+    <section className={styles.skills}>
       <h2>My Skills</h2>
-      <div className={styles.skills}>
-        <Image src="/html-5.png" height={80} width={80} alt="Adelkis" />
-        <Image src="/css.png" height={80} width={80} alt="Adelkis" />
-        <Image src="/js.png" height={80} width={80} alt="js" />
-        <Image src="/react.png" height={80} width={80} alt="react" />
-        <Image src="/node-js.png" height={80} width={80} alt="node-js" />
-        <Image src="/express.png" height={80} width={80} alt="express" />
-        <Image src="/mdb.png" height={80} width={80} alt="mongodb" />
+      <div>
+        {skills.map((skill) => (
+          <img
+            key={skill}
+            src={`/${skill}.png`}
+            alt={skill}
+            className={styles.skill}
+          />
+        ))}
       </div>
     </section>
   );
