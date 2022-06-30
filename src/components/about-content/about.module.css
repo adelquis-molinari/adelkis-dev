@@ -29,4 +29,10 @@
     width: 40vh;
     text-align: center;
   }
+  .desriptionAbout h2 {
+    position: relative;
+    top: 0;
+    left: 0;
+    border-right: none;
+  }
 }
