@@ -7,8 +7,8 @@ function CardProyect({ title, description, image, link }) {
   return (
     <div className={styles.card}>
       <Link href={link}>
-        <a>
-          <Image src={`/${image}.png`} height={200} width={200} alt={title} />
+        <a target="blank">
+          <img src={`/${image}.png`} alt={title} />
           <div className={styles.cardDescription}>
             <h3>{title}</h3>
             <p>{description}</p>

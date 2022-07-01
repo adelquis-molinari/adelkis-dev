@@ -1,6 +1,7 @@
 .proyectsConteiner {
   position: relative;
   display: flex;
+  width: 80%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -8,7 +9,7 @@
 .conteinerTitle {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   width: 100%;
   padding: 20px;
 }
@@ -16,17 +17,15 @@
   border-bottom: 6px solid var(--primary);
   border-left: 6px solid var(--primary);
   padding: 1rem 6rem;
-  margin: 50px 0 10px 60rem;
 }
 .proyectsItem {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   width: 100%;
   margin-top: 2em;
-  padding: 50px;
+  padding: 10px;
   border-radius: 10px;
   background: linear-gradient(to bottom, var(--info), transparent);
   box-shadow: 0px -7px 10px rgba(0, 0, 0, 0.1);
