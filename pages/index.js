@@ -13,10 +13,7 @@ export default function Home() {
       <AboutContent />
       <Skills />
       <MyProyects />
-      <section>
-        <h2>Contact</h2>
-        <Form />
-      </section>
+      <Form />
     </main>
   );
 }

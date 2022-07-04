@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: center;
   height: 700px;
+  width: 100%;
+  background: linear-gradient(to bottom, #1ee5ff25, transparent);
 }
 .title span {
   color: var(--secondary);
