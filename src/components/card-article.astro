@@ -1,0 +1,43 @@
+---
+export interface PropsArticle {
+  content: {
+    title: string;
+    description: string;
+    pubDate?: string;
+    updatedDate?: string;
+    heroImage?: string;
+  };
+}
+const { url, heroImage, title, description, pubDate } = Astro.props;
+---
+
+<div
+  class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto"
+>
+  <a href={url} class="w-full block h-full">
+    <img
+      alt="blog photo"
+      src={heroImage}
+      class="max-h-40 w-full object-cover"
+    />
+    <div class="bg-white dark:bg-gray-800 w-full p-4">
+      <p class="text-gray-800 dark:text-white text-xl font-medium mb-2">
+        {title}
+      </p>
+      <p class="text-gray-400 dark:text-gray-300 font-light text-md">
+        {description}
+      </p>
+      <div class="flex flex-wrap justify-starts items-center mt-4">
+        <time datetime={pubDate}>
+          {
+            new Date(pubDate).toLocaleDateString("sp-ar", {
+              year: "numeric",
+              month: "short",
+              day: "numeric",
+            })
+          }
+        </time>
+      </div>
+    </div>
+  </a>
+</div>

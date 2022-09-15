@@ -3,6 +3,8 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import CardArticle from "../components/card-article.astro";
+import { PropsArticle } from "../components/card-article.astro";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
@@ -73,35 +75,13 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
           {
             posts.map((post) => (
-              <div class="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
-                <a href={post.url} class="w-full block h-full">
-                  <img
-                    alt="blog photo"
-                    src={post.frontmatter.heroImage}
-                    class="max-h-40 w-full object-cover"
-                  />
-                  <div class="bg-white dark:bg-gray-800 w-full p-4">
-                    <p class="text-gray-800 dark:text-white text-xl font-medium mb-2">
-                      {post.frontmatter.title}
-                    </p>
-                    <p class="text-gray-400 dark:text-gray-300 font-light text-md">
-                      {post.frontmatter.description}
-                    </p>
-                    <div class="flex flex-wrap justify-starts items-center mt-4">
-                      <time datetime={post.frontmatter.pubDate}>
-                        {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                          "sp-ar",
-                          {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                          }
-                        )}
-                      </time>
-                    </div>
-                  </div>
-                </a>
-              </div>
+              <CardArticle
+                url={post.url}
+                heroImage={post.frontmatter.heroImage}
+                title={post.frontmatter.title}
+                description={post.frontmatter.description}
+                pubDate={post.frontmatter.pubDate}
+              />
             ))
           }
         </div>
