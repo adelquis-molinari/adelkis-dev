@@ -1,0 +1,42 @@
+---
+import CardProyect from "./CardProyect.astro";
+
+const projects = [
+  {
+    title: "Project 1",
+    description:
+      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
+    image: "https://picsum.photos/300",
+    tag: ["React", "Next", "Astro"],
+  },
+  {
+    title: "Project 2",
+    description:
+      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
+    image: "https://picsum.photos/300",
+    tag: ["React", "Next", "Astro"],
+  },
+  {
+    title: "Project 3",
+    description:
+      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
+    image: "https://picsum.photos/300",
+    tag: ["React", "Next", "Astro"],
+  },
+  {
+    title: "Project 4",
+    description:
+      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
+    image: "https://picsum.photos/300",
+    tag: ["React", "Next", "Astro"],
+  },
+];
+---
+
+<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+  {projects.map((project) => <CardProyect {...project} />)}
+</div>
+<!-- 
+<section class="flex flex-col py-8">
+  {projects.map((project) => <CardProyect {...project} />)}
+</section> -->

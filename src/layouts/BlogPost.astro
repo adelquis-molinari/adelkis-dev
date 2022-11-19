@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FeaturedArticles from "../components/featured-articles.astro";
+import Navbar from "../components/Navbar";
 
 export interface Props {
   content: {
@@ -24,11 +25,11 @@ const {
     <BaseHead title={title} description={description} />
   </head>
 
-  <body>
-    <Header />
-    <main>
+  <body class="font-rubik bg-zinc-900">
+    <main class="flex-col md:max-w-screen-xl m-auto">
+      <Navbar />
       <article
-        class="flex flex-col justify-center mx-auto xl:max-w-5xl md:max-w-3xl max-w-md px-4"
+        class="flex flex-col justify-center mx-auto xl:max-w-5xl md:max-w-3xl max-w-md px-4 text-gray-200"
       >
         {
           heroImage && (

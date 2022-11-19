@@ -15,7 +15,7 @@ import { links } from "../helpers/data-hero";
             <div class="ml-10 flex items-baseline space-x-4">
               {
                 links.map((link) => (
-                  <HeaderLink class={link.className} href={link.href}>
+                  <HeaderLink class={link.classType} href={link.href}>
                     {link.label}
                   </HeaderLink>
                 ))
@@ -46,16 +46,16 @@ import { links } from "../helpers/data-hero";
           </button>
         </div>
       </div>
-    </div>
-    <div class="md:hidden">
-      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-        {
-          links.map((link) => (
-            <HeaderLink class={link.classNameMenuDropdown} href={link.href}>
-              {link.label}
-            </HeaderLink>
-          ))
-        }
+      <div class="md:hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {
+            links.map((link) => (
+              <HeaderLink class={link.classTypeMenuDropdown} href={link.href}>
+                {link.label}
+              </HeaderLink>
+            ))
+          }
+        </div>
       </div>
     </div>
   </nav>
