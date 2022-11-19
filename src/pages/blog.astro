@@ -1,6 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import CardArticle from "../components/card-article.astro";
@@ -18,44 +18,24 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      ul {
-        list-style-type: none;
-        padding: unset;
-      }
-      ul li {
-        display: flex;
-      }
-      ul li time {
-        flex: 0 0 130px;
-        font-style: italic;
-        color: #888;
-      }
-      ul li a:visited {
-        color: #8e32dc;
-      }
-    </style>
   </head>
-  <body>
-    <Header />
-    <main>
+  <body class="font-rubik bg-zinc-900">
+    <main class="flex-col md:max-w-screen-xl m-auto">
+      <Navbar client:visible />
       <section
         class="flex flex-col justify-center mx-auto xl:max-w-5xl md:max-w-3xl max-w-md px-4"
       >
-        <div class="header flex items-end justify-between mb-12">
+        <div class="header flex justify-between mb-12 py-16 items-center">
           <div class="title">
-            <p class="text-4xl font-bold text-gray-800 mb-4">
+            <p class="text-4xl font-bold text-gray-400 mb-4">
               Lastest articles
-            </p>
-            <p class="text-2xl font-light text-gray-400">
-              All article are verified by 2 experts and valdiate by the CTO
             </p>
           </div>
           <div class="text-end">
             <form
               class="flex flex-col md:flex-row w-3/4 md:w-full max-w-sm md:space-x-3 space-y-3 md:space-y-0 justify-center"
             >
-              <div class="relative">
+              <div class="">
                 <input
                   type="text"
                   id="form-subscribe-Search"
@@ -72,20 +52,27 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
             </form>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-12">
-          {
-            posts.map((post) => (
-              <CardArticle
-                url={post.url}
-                heroImage={post.frontmatter.heroImage}
-                title={post.frontmatter.title}
-                description={post.frontmatter.description}
-                pubDate={post.frontmatter.pubDate}
-              />
-            ))
-          }
-        </div>
       </section>
+      <div class="flex">
+        <ul class="flex flex-col w-10/12 m-auto lg:w-full">
+          {
+            posts.map((post) => {
+              const { frontmatter, url } = post;
+              const { title, pubDate, description, heroImage } = frontmatter;
+              const { default: Component } = post;
+              const props = {
+                url,
+                heroImage,
+                title,
+                pubDate,
+                description,
+                Component,
+              };
+              return <CardArticle {...props} />;
+            })
+          }
+        </ul>
+      </div>
     </main>
     <Footer />
   </body>

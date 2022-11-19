@@ -3,6 +3,7 @@ import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/hero.astro";
+import SectionProyect from "../components/SectionProyect.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
@@ -11,10 +12,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="font-rubik">
-    <main>
+  <body class="font-rubik bg-zinc-900">
+    <main class="flex-col md:max-w-screen-xl m-auto">
       <Navbar client:load />
       <Hero />
+      <SectionProyect />
       <Footer />
     </main>
   </body>
