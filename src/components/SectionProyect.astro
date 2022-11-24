@@ -3,40 +3,48 @@ import CardProyect from "./CardProyect.astro";
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Evucar",
     description:
-      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
-    image: "https://picsum.photos/300",
-    tag: ["React", "Next", "Astro"],
+      "Proyecto creado en colaboración con un equipo de desarrollo, creando una app de concesionaria.",
+    image: "/proyectos/evucar.png",
+    link: "https://evuca-concesionaria.vercel.app/",
+    tag: ["React", "Redux", "firebase", "auth0", "styled-components"],
   },
   {
-    title: "Project 2",
+    title: "Crypto Hoy",
     description:
-      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
-    image: "https://picsum.photos/300",
-    tag: ["React", "Next", "Astro"],
+      "App de estadísticas de mercado de criptomonedas usando las api de Rapidapi, presentada en la aceleración en Alkemy.",
+    image: "/proyectos/crypto-hoy.png",
+    link: "https://crypto-hoy.vercel.app/",
+    tag: ["React", "Redux", "ant Design", "Chartjs"],
   },
   {
-    title: "Project 3",
+    title: "Nivia Modas",
     description:
-      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
-    image: "https://picsum.photos/300",
-    tag: ["React", "Next", "Astro"],
+      "Hecho solo en HTML, CSS y JavaScript. Se realizó como caso de estudio.",
+    image: "/proyectos/nivia-modas.png",
+    link: "https://adelquis-molinari.github.io/Nivia-Pino/",
+    tag: ["HTML", "CSS", "JavaScript", "Bootstrap"],
   },
   {
-    title: "Project 4",
+    title: "Matias Bayma",
     description:
-      "Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño.",
-    image: "https://picsum.photos/300",
-    tag: ["React", "Next", "Astro"],
+      "Pagina desarrollada en wordpress. Realizada para un cliente que deseaba administrar su pagina.",
+    image: "/proyectos/matias-bayma.png",
+    link: "https://matiasbayma.net/",
+    tag: ["Wordpress", "PHP", "CSS", "JavaScript"],
   },
 ];
 ---
 
-<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
-  {projects.map((project) => <CardProyect {...project} />)}
+<div class="flex w-full text-center justify-center mb-20">
+  <h2
+    class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-t from-violet-500 to-teal-500"
+  >
+    Proyectos
+  </h2>
 </div>
-<!-- 
-<section class="flex flex-col py-8">
+
+<section class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
   {projects.map((project) => <CardProyect {...project} />)}
-</section> -->
+</section>

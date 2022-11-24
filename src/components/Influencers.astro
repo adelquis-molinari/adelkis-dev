@@ -1,0 +1,41 @@
+---
+import CardInfluencer from "./CardInfluencer.astro";
+
+const influenciador = [
+  {
+    name: "Miguel Ángel Durán / Midu Dev",
+    img: "/influencers/midu-dev.jpg",
+    description: "Developer, Teacher, Content creator.",
+    twitter: "https://twitter.com/midudev",
+    github: "https://github.com/midudev",
+    twitch: "https://www.twitch.tv/midudev",
+  },
+  {
+    name: "Goncy Pozzo",
+    img: "/influencers/goncy.jpg",
+    description: "Developer, Teacher, Speaker.",
+    twitter: "https://twitter.com/goncy",
+    github: "https://github.com/goncy",
+    twitch: "https://www.twitch.tv/goncypozzo",
+  },
+];
+---
+
+<section class="p-8 rounded-lg shadow">
+  <h2
+    class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-t to-teal-500 from-sky-600 text-center"
+  >
+    Mis Influéncias
+  </h2>
+  <p class="text-center mb-12 text-xl font-normal text-gray-400">
+    Estas son las personas que me han influenciado en mi carrera como
+    desarrollador, a la cual invito a seguir..✨
+  </p>
+  <div class="flex items-center flex-col md:flex-row justify-evenly">
+    {
+      influenciador.map((influenciador) => (
+        <CardInfluencer {...influenciador} />
+      ))
+    }
+  </div>
+</section>

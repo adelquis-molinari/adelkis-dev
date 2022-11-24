@@ -34,7 +34,7 @@ const today = new Date();
           width="26"
           height="26"
           fill="currentColor"
-          class="text-xl hover:text-violet-500 dark:hover:text-white transition-colors duration-200"
+          class="text-xl hover:text-violet-800 dark:hover:text-white transition-colors duration-200"
           viewBox="0 0 1792 1792"
         >
           <path
@@ -66,9 +66,13 @@ const today = new Date();
     <div
       class="text-center text-gray-500 dark:text-gray-200 pt-10 sm:pt-12 font-light flex items-center justify-center"
     >
-      {today.getFullYear()} || Created by Adelkis <span class="text-teal-400"
-        >Dev</span
-      >
+      <p>
+        {today.getFullYear()} || Created by Adelkis<span class="text-teal-400"
+          >Dev</span
+        > in <a href="https://astro.build/" target="_blank" class="text-red-500"
+          >Astro</a
+        >
+      </p>
     </div>
   </div>
 </footer>

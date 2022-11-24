@@ -4,6 +4,8 @@ import Navbar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.astro";
 import Hero from "../components/hero.astro";
 import SectionProyect from "../components/SectionProyect.astro";
+import Influencers from "../components/Influencers.astro";
+import About from "../components/About.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 ---
 
@@ -16,7 +18,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
     <main class="flex-col md:max-w-screen-xl m-auto">
       <Navbar client:load />
       <Hero />
+      <About />
       <SectionProyect />
+      <Influencers />
       <Footer />
     </main>
   </body>

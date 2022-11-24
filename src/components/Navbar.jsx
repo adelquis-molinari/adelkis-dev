@@ -10,12 +10,16 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 md:relative w-full z-10 bg-zinc-900 ">
+    <nav className="fixed top-0 md:relative w-full z-10 bg-zinc-900 md:bg-transparent ">
       <div className="container mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="w-full justify-between flex items-center">
-            <a className="flex-shrink-0" href="/">
-              <img className="h-8" src="/adelkis-logo.png" alt="adelkis.dev" />
+            <a className="flex-shrink-0 " href="/">
+              <img
+                className="h-7 pl-2 md:h-8"
+                src="/adelkis-logo.png"
+                alt="adelkis.dev"
+              />
             </a>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -33,7 +37,7 @@ function Navbar() {
           <div className="block">
             <div className="ml-4 flex items-center md:ml-6"></div>
           </div>
-          <div className="-mr-2 flex md:hidden">
+          <div className="flex md:hidden">
             <button
               onClick={toggleMenu}
               className="text-gray-400 dark:text-white hover:text-gray-300 inline-flex items-center justify-center p-2 rounded-md focus:outline-none"

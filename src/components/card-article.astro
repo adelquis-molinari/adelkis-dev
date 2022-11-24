@@ -11,10 +11,11 @@ export interface PropsArticle {
 const { url, heroImage, title, description, pubDate } = Astro.props;
 ---
 
-<li
-  class="cursor-pointer w-full py-4 border-b-2 border-gray-600 hover:bg-gradient-to-r from-teal-900 transition-colors border-line"
->
-  <a href={url} class="w-full block px-4">
+<li>
+  <a
+    href={url}
+    class="block px-4 cursor-pointer w-full py-4 border-gray-600 hover:bg-gradient-to-r from-gray-800 transition-colors border-line"
+  >
     <article>
       <header>
         <h2 class="text-white text-xl font-medium">{title}</h2>

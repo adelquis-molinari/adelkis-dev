@@ -1,19 +1,39 @@
 ---
-const { title, description, image, tag } = Astro.props;
-console.log(tag);
+const { title, description, image, tag, link } = Astro.props;
+
+type Props = {
+  title: string;
+  description: string;
+  image: string;
+  tag: Array<string>;
+  link: string;
+};
 ---
 
-<li
-  class="cursor-pointer w-full py-4 border-b-2 border-gray-600 hover:bg-gradient-to-r from-teal-900 transition-colors card"
->
-  <a href="#" class="w-full block px-4">
+<li>
+  <a
+    href={link}
+    class="w-full block px-4 cursor-pointer py-4 border-b-2 border-gray-600 hover:bg-gradient-to-r from-slate-800 transition-colors card"
+    target="_blank"
+  >
     <article>
       <header>
         <img src={image} alt="" class="w-full h-64 object-cover" />
       </header>
-      <h2 class="text-white text-xl font-medium">{title}</h2>
+      <h2 class="text-white text-xl font-medium py-2">{title}</h2>
       <p class="text-gray-400 font-light text-md">{description}</p>
     </article>
+    <footer
+      class="flex items-end justify-end w-full text-teal-500 font-light text-sm py-2"
+    >
+      {
+        tag.map((t) => (
+          <span class="px-2 py-1 rounded ml-2 border border-teal-400 ">
+            {t}
+          </span>
+        ))
+      }
+    </footer>
   </a>
 </li>
 
