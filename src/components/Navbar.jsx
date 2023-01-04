@@ -1,5 +1,5 @@
 import HeaderLink from "./HeaderLink.jsx";
-import { links } from "../helpers/data-hero";
+import { links } from "../helpers/data";
 import React, { useState } from "react";
 
 function Navbar() {

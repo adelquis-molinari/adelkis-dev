@@ -18,7 +18,11 @@ type Props = {
   >
     <article>
       <header>
-        <img src={image} alt="" class="w-full h-64 object-cover" />
+        <img
+          src={image}
+          alt=""
+          class="w-full h-64 object-cover aspect-square"
+        />
       </header>
       <h2 class="text-white text-xl font-medium py-2">{title}</h2>
       <p class="text-gray-400 font-light text-md">{description}</p>
