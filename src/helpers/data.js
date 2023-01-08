@@ -55,10 +55,38 @@ export const projects = [
   },
   {
     title: "Matias Bayma",
-    description:
-      "Pagina desarrollada en wordpress. Realizada para un cliente que deseaba administrar su pagina.",
+    description: "Realizada para un cliente que deseaba administrar su pagina.",
     image: "/proyectos/matias-bayma.webp",
     link: "https://matiasbayma.net/",
     tag: ["Wordpress", "PHP", "CSS", "JavaScript"],
+  },
+];
+
+export const influencers = [
+  {
+    name: "Miguel Ángel Durán / Midu Dev",
+    img: "/influencers/midu-dev.jpg",
+    description: "Developer, Teacher, Content creator.",
+    twitter: "https://twitter.com/midudev",
+    github: "https://github.com/midudev",
+    twitch: "https://www.twitch.tv/midudev",
+    youtube: "https://www.youtube.com/@midudev",
+  },
+  {
+    name: "Goncy Pozzo",
+    img: "/influencers/goncy.jpg",
+    description: "Developer, Teacher, Speaker.",
+    twitter: "https://twitter.com/goncy",
+    github: "https://github.com/goncy",
+    twitch: "https://www.twitch.tv/goncypozzo",
+    youtube: "https://www.youtube.com/@goncypozzo",
+  },
+  {
+    name: "Juan Pablo De la torre Valdez",
+    img: "/influencers/juanpablogdl.jpg",
+    description: "Developer, Teacher, Speaker.",
+    twitter: "https://twitter.com/codigoconjuan",
+    github: "https://github.com/codigoconjuan",
+    youtube: "https://www.youtube.com/c/codigoconjuan",
   },
 ];
