@@ -33,7 +33,7 @@ const {
         {
           heroImage && (
             <img
-              class=" h-auto transition-shadow ease-in-out duration-300 shadow-none hover:shadow-xl"
+              class=" h-auto w-full object-cover mb-6 aspect-[16/9]"
               src={heroImage}
               alt={title}
             />
@@ -43,16 +43,56 @@ const {
         {pubDate && <time>{pubDate}</time>}
         {
           updatedDate && (
-            <div>
+            <span class="mb-5 text-gray-400 italic ">
               Last updated on <time>{updatedDate}</time>
-            </div>
+            </span>
           )
         }
-        <hr />
-        <slot />
+        <!-- <slot /> -->
+        <h2 class="text-3xl">Hola, soy Adelquis Molinari</h2>
+        <p>
+          Me considero una persona que busca nuevos retos, aprender cosas nuevas
+          y resolver los desafios con la tecnología mas adecuada. El trabajo en
+          equipo es fundamental para el desarrollo de un proyecto, por eso
+          siempre busco estar en constante aprendizaje y compartir mis
+          conocimientos con los demás.
+        </p>
+        <p>
+          Aunque actualmente no estoy en el sector tech como desarrollador,
+          considero que los conocimientos que he adquirido en mi carrera me han
+          permitido desarrollar habilidades que me han ayudado a crecer como
+          persona y profesional.
+        </p>
+        <h3 class="text-lg py-4 text-teal-300">Mis valores</h3>
+        <ul class="list-disc pl-6">
+          <li>Respeto</li>
+          <li>Responsabilidad</li>
+          <li>Compromiso</li>
+          <li>Trabajo en equipo</li>
+          <li>Resolución de problemas</li>
+        </ul>
+        <h3 class="text-lg py-4 text-teal-300">Mis habilidades</h3>
+        <ul class="pl-6 border border-teal-600">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Git</li>
+          <li>Node</li>
+          <li>Express</li>
+          <li>SQL</li>
+          <li>PostgreSQL</li>
+          <li>Python</li>
+          <li>Flask</li>
+          <li>Java</li>
+          <li>Spring</li>
+          <li>Android</li>
+          <li>Scrum</li>
+          <li>Agile</li>
+        </ul>
       </article>
+      <FeaturedArticles />
+      <Footer />
     </main>
-    <FeaturedArticles />
-    <Footer />
   </body>
 </html>
