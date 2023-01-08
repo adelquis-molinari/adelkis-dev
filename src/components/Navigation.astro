@@ -1,0 +1,74 @@
+<div class="w-full fixed top-3 z-10">
+  <nav
+    class="max-w-screen-xl justify-between items-center flex mx-auto border border-gray-300 rounded p-3 backdrop-blur-lg flex-col lg:flex-row"
+  >
+    <div class="container flex justify-between">
+      <a href="/"
+        ><img class="h-6" src="adelkis-logo.png" alt="adelkis molinnari" />
+      </a>
+      <button
+        data-collapse-toggle="navbar-sticky"
+        type="button"
+        class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:ring-gray-200 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        aria-controls="navbar-sticky"
+        aria-expanded="false"
+      >
+        <svg
+          class="w-6 h-6"
+          aria-hidden="true"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+          ><path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <div
+      class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 md:top-0 md:right-0 md:mt-3 md:mr-3"
+      id="navbar-sticky"
+    >
+      <ul
+        class="flex flex-col gap-5 md:flex-row text-slate-400 md:space-x-8 md:mt-0"
+      >
+        <li>
+          <a class="hover:text-teal-400 transition-colors" href="#home"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a class="hover:text-teal-400 transition-colors" href="#About"
+            >SobreMi</a
+          >
+        </li>
+        <li>
+          <a class="hover:text-teal-400 transition-colors" href="#projects"
+            >Proyetos</a
+          >
+        </li>
+        <li>
+          <a class="hover:text-teal-400 transition-colors" href="#influences"
+            >Influencias</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<script>
+  const btn = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+  const target = document.querySelector("#navbar-sticky");
+
+  btn.addEventListener("click", () => {
+    target.classList.toggle("hidden");
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 768) {
+      target.classList.remove("hidden");
+    }
+  });
+</script>
