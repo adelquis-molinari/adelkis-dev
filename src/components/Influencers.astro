@@ -1,37 +1,9 @@
 ---
 import CardInfluencer from "./CardInfluencer.astro";
-
-const influenciadores = [
-  {
-    name: "Miguel Ángel Durán / Midu Dev",
-    img: "/influencers/midu-dev.jpg",
-    description: "Developer, Teacher, Content creator.",
-    twitter: "https://twitter.com/midudev",
-    github: "https://github.com/midudev",
-    twitch: "https://www.twitch.tv/midudev",
-    youtube: "https://www.youtube.com/@midudev",
-  },
-  {
-    name: "Goncy Pozzo",
-    img: "/influencers/goncy.jpg",
-    description: "Developer, Teacher, Speaker.",
-    twitter: "https://twitter.com/goncy",
-    github: "https://github.com/goncy",
-    twitch: "https://www.twitch.tv/goncypozzo",
-    youtube: "https://www.youtube.com/@goncypozzo",
-  },
-  {
-    name: "Juan Pablo De la torre Valdez",
-    img: "/influencers/juanpablogdl.jpg",
-    description: "Developer, Teacher, Speaker.",
-    twitter: "https://twitter.com/codigoconjuan",
-    github: "https://github.com/codigoconjuan",
-    youtube: "https://www.youtube.com/c/codigoconjuan",
-  },
-];
+import { influencers } from "../helpers/data";
 ---
 
-<section class="py-40">
+<section id="influences" class="py-40">
   <h2
     class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-t to-teal-500 from-sky-600 text-center pb-6"
   >
@@ -42,10 +14,6 @@ const influenciadores = [
     desarrollador, a la cual invito a seguir..✨
   </p>
   <div class="flex items-center flex-col md:flex-row justify-evenly">
-    {
-      influenciadores.map((influenciador) => (
-        <CardInfluencer {...influenciador} />
-      ))
-    }
+    {influencers.map((influenciador) => <CardInfluencer {...influenciador} />)}
   </div>
 </section>

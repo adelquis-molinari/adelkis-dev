@@ -8,17 +8,19 @@ import Influencers from "../components/Influencers.astro";
 import About from "../components/About.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import MaxWidh from "../components/MaxWidh.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth overflow-y-auto">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body class="font-rubik bg-zinc-900">
     <main class="flex-col m-auto">
+      <Navigation client:load />
       <MaxWidh>
-        <Navbar client:load />
+        <!-- <Navbar client:load /> -->
         <Hero />
         <About />
         <SectionProyect />

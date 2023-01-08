@@ -4,6 +4,7 @@ import { projects } from "../helpers/data";
 import MaxWidh from "../components/MaxWidh.astro";
 import BaseHead from "../components/BaseHead.astro";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 ---
 
@@ -27,6 +28,7 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
         <section class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
           {projects.map((project) => <CardProyect {...project} />)}
         </section>
+        <Footer />
       </MaxWidh>
     </main>
   </body>
