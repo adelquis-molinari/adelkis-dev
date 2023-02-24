@@ -3,7 +3,6 @@ import CardProyect from "../components/CardProyect.astro";
 import { projects } from "../helpers/data";
 import MaxWidh from "../components/MaxWidh.astro";
 import BaseHead from "../components/BaseHead.astro";
-import Navbar from "../components/Navbar";
 import Footer from "../components/Footer.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 ---
@@ -16,7 +15,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
   <body class="font-rubik bg-zinc-900">
     <main class="flex-col m-auto">
       <MaxWidh>
-        <Navbar />
         <div class="flex w-full text-center justify-center mb-20">
           <h2
             class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-t from-violet-500 to-teal-500"
