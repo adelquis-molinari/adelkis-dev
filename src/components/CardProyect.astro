@@ -10,36 +10,30 @@ type Props = {
 };
 ---
 
-<li>
-  <a
-    href={link}
-    class="w-full block px-4 cursor-pointer py-4 border-b-2 border-gray-600 hover:bg-gradient-to-r from-slate-800 transition-colors card"
-    target="_blank"
+<a
+  href={link}
+  class="w-full block px-4 cursor-pointer py-4 border-b-2 border-gray-600 hover:bg-gradient-to-r from-slate-800 transition-colors card"
+  target="_blank"
+>
+  <article>
+    <header>
+      <img src={image} alt="" class="w-full h-64 object-cover aspect-square" />
+    </header>
+    <h2 class="text-white text-xl font-medium py-2">{title}</h2>
+    <p class="text-gray-400 font-light text-md">{description}</p>
+  </article>
+  <footer
+    class="flex items-end justify-end w-full text-teal-500 font-light text-sm py-2"
   >
-    <article>
-      <header>
-        <img
-          src={image}
-          alt=""
-          class="w-full h-64 object-cover aspect-square"
-        />
-      </header>
-      <h2 class="text-white text-xl font-medium py-2">{title}</h2>
-      <p class="text-gray-400 font-light text-md">{description}</p>
-    </article>
-    <footer
-      class="flex items-end justify-end w-full text-teal-500 font-light text-sm py-2"
-    >
-      {
-        tag.map((t) => (
-          <span class="px-2 py-1 rounded ml-2 border border-teal-400 text-xs md:text-base">
-            {t}
-          </span>
-        ))
-      }
-    </footer>
-  </a>
-</li>
+    {
+      tag.map((t) => (
+        <span class="px-2 py-1 rounded ml-2 border border-teal-400 text-xs md:text-base">
+          {t}
+        </span>
+      ))
+    }
+  </footer>
+</a>
 
 <style>
   .card {
