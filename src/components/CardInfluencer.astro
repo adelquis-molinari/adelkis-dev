@@ -1,4 +1,10 @@
 ---
+import {
+  TwitterIcon,
+  GithubIcon,
+  TwichIcon,
+  YoutubeIcon,
+} from "../icons/icons.jsx";
 const { name, img, description, twitter, github, twitch, youtube } =
   Astro.props;
 
@@ -23,77 +29,21 @@ const youtubeIcon = `
     class="pt-4 flex border-t border-gray-200 w-44 mx-auto text-gray-500 items-center justify-between"
   >
     <a href={twitter} target="_blank">
-      <svg
-        width="30"
-        height="30"
-        fill="currentColor"
-        class="text-xl hover:text-cyan-400 transition-colors duration-200"
-        viewBox="0 0 1792 1792"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M1684 408q-67 98-162 167 1 14 1 42 0 130-38 259.5t-115.5 248.5-184.5 210.5-258 146-323 54.5q-271 0-496-145 35 4 78 4 225 0 401-138-105-2-188-64.5t-114-159.5q33 5 61 5 43 0 85-11-112-23-185.5-111.5t-73.5-205.5v-4q68 38 146 41-66-44-105-115t-39-154q0-88 44-163 121 149 294.5 238.5t371.5 99.5q-8-38-8-74 0-134 94.5-228.5t228.5-94.5q140 0 236 102 109-21 205-78-37 115-142 178 93-10 186-50z"
-        >
-        </path>
-      </svg>
+      <TwitterIcon />
     </a>
     <a href={github} target="_blank">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-        fill="currentColor"
-        class="text-xl hover:text-violet-800 transition-colors duration-200"
-        viewBox="0 0 1792 1792"
-      >
-        <path
-          d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"
-        >
-        </path>
-      </svg>
+      <GithubIcon />
     </a>
     <!-- svg twitch -->
     {
       twitch && (
         <a href={twitch} target="_blank">
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="text-xl hover:text-violet-500 transition-colors duration-200"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M2.149 0l-1.612 4.119v16.836h5.731v3.045h3.224l3.045-3.045h4.657l6.269-6.269v-14.686h-21.314zm19.164 13.612l-3.582 3.582h-5.731l-3.045 3.045v-3.045h-4.836v-15.045h17.194v11.463zm-3.582-7.343v6.262h-2.149v-6.262h2.149zm-5.731 0v6.262h-2.149v-6.262h2.149z"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            />
-          </svg>
+          <TwichIcon />
         </a>
       )
     }
     <a href={youtube} target="_blank">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        xmlns:xlink="http://www.w3.org/1999/xlink"
-        viewBox="0 0 310 310"
-        xml:space="preserve"
-        width="35"
-        height="35"
-        fill="currentColor"
-        class="text-xl hover:text-red-500 transition-colors duration-200"
-      >
-        <path
-          id="XMLID_823_"
-          d="M297.917,64.645c-11.19-13.302-31.85-18.728-71.306-18.728H83.386c-40.359,0-61.369,5.776-72.517,19.938
-		C0,79.663,0,100.008,0,128.166v53.669c0,54.551,12.896,82.248,83.386,82.248h143.226c34.216,0,53.176-4.788,65.442-16.527
-		C304.633,235.518,310,215.863,310,181.835v-53.669C310,98.471,309.159,78.006,297.917,64.645z M199.021,162.41l-65.038,33.991
-		c-1.454,0.76-3.044,1.137-4.632,1.137c-1.798,0-3.592-0.484-5.181-1.446c-2.992-1.813-4.819-5.056-4.819-8.554v-67.764
-		c0-3.492,1.822-6.732,4.808-8.546c2.987-1.814,6.702-1.938,9.801-0.328l65.038,33.772c3.309,1.718,5.387,5.134,5.392,8.861
-		C204.394,157.263,202.325,160.684,199.021,162.41z"
-        ></path>
-      </svg>
+      <YoutubeIcon />
     </a>
   </div>
 </div>
